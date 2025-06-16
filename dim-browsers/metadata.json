@@ -1,0 +1,11 @@
+{
+  "id": "dim-browsers",
+  "name": "Dim Browser Windows",
+  "description": "Darkens Firefox and Chromium windows to reduce HDR glare.",
+  "author": "shaunchokshi-gh@pm.me",
+  "license": "MIT",
+  "version": "1.0",
+  "category": "Accessibility",
+  "dependencies": [],
+  "enabledByDefault": false
+}
