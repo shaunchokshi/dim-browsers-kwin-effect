@@ -15,7 +15,7 @@
         "Name": "Dim Browser Windows",
         "Version": "3.0",        
         "ServiceTypes": ["KWin/Effect"],
-        "Config": "dim-browsers/config/main.xml"
+        "Config": "config/main.xml"
     },
     "X-KDE-ConfigModule": "kcm_kwin4_dim_browsers",
     "X-KDE-Ordering": 60,
