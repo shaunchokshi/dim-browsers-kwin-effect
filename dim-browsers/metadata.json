@@ -13,15 +13,13 @@
         "Id": "dim_browsers",
         "License": "GPL",
         "Name": "Dim Browser Windows",
-        "Version": "3.0",
-        "Kcmodule": "kcm_kwin4_effect_dim_browsers",
+        "Version": "3.0",        
         "ServiceTypes": ["KWin/Effect"],
-        "Config": "main.xml"
+        "Config": "dim-browsers/config/main.xml"
     },
-    "X-KDE-ConfigModule": "main.xml",
+    "X-KDE-ConfigModule": "kcm_kwin4_dim_browsers",
     "X-KDE-Ordering": 60,
     "X-KWin-Exclusive-Category": "minimize",
-    "X-KWin-Video-Url": "https://files.kde.org/plasma/kwin/effect-videos/minimize.ogv",
     "X-Plasma-API": "javascript",
     "X-Plasma-MainScript": "code/main.js",
     "X-KWin-Config-TranslationDomain": "kwin_effects"
