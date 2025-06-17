@@ -1,0 +1,28 @@
+<ui version="4.0">
+ <class>DimBrowsersConfig</class>
+ <widget class="QWidget" name="DimBrowsersConfig">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QSlider" name="kcfg_darkenFactor">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>50</number>
+     </property>
+     <property name="toolTip">
+      <string>Set how much to darken browser windows (0 = none, 100 = max)</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

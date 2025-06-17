@@ -1,0 +1,12 @@
+{
+  "id": "dim-browsers",
+  "name": "Dim Browser Windows",
+  "description": "Applies an OpenGL shader to darken browser windows.",
+  "author": "shaunchokshi-gh@pm.me",
+  "license": "GPLv3",
+  "version": "2.5",
+  "category": "Accessibility",
+  "enabledByDefault": false,
+  "kcmodule": "kcm_kwin4_effect_dim_browsers",
+  "config": "main.xml"
+}

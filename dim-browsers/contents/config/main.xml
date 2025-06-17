@@ -1,0 +1,13 @@
+<!DOCTYPE kcfg SYSTEM "kcfg.dtd">
+<kcfg>
+    <group name="General">
+        <entry name="darkenFactor" type="Double">
+            <label>Darkening Level</label>
+            <default>0.5</default>
+        </entry>
+        <entry name="TargetClasses" type="String">
+            <label>Browser classes to dim (JSON array, e.g. ["firefox", "chromium", "google-chrome", "vivaldi"])</label>
+            <default>["firefox", "chromium", "google-chrome", "vivaldi"]</default>
+        </entry>
+    </group>
+</kcfg>

@@ -1,0 +1,9 @@
+<!DOCTYPE kcfg SYSTEM "kcfg.dtd">
+<kcfg>
+    <group name="General">
+        <entry name="darkenFactor" type="Double">
+            <label>Darkening Level</label>
+            <default>0.75</default>
+        </entry>
+    </group>
+</kcfg>
