@@ -1,6 +1,9 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
 import org.kde.kcm 2.0
+import QtQml 2.15
+import QtDBus 2.0
 
 KConfigItem {
     id: darkenFactor
@@ -28,6 +31,28 @@ KConfigItem {
 KPage {
     id: page
     title: "Dim Browser Windows"
+
+    property var availableClasses: []
+    property DBusInterface kwinIface: DBusInterface {
+        service: "org.kde.KWin"
+        path: "/KWin"
+        iface: "org.kde.KWin"
+    }
+
+    function refreshWindowList() {
+        var reply = kwinIface.call("listWindows");
+        var ids = reply.split('\n');
+        var classes = [];
+        for (var i in ids) {
+            var id = ids[i].trim();
+            if (!id)
+                continue;
+            var cls = kwinIface.call("windowClass", id).trim();
+            if (cls && classes.indexOf(cls) === -1)
+                classes.push(cls);
+        }
+        availableClasses = classes;
+    }
 
     ColumnLayout {
         anchors.fill: parent
@@ -62,6 +87,26 @@ KPage {
             wrapMode: TextArea.Wrap
             onTextChanged: {
                 targetClasses.value = text
+            }
+        }
+
+        RowLayout {
+            Layout.fillWidth: true
+            Button {
+                text: "Load Open Windows"
+                onClicked: refreshWindowList()
+            }
+            ComboBox {
+                model: availableClasses
+                Layout.fillWidth: true
+                onActivated: function(idx) {
+                    var cls = model.get(idx)
+                    if (cls && classesField.text.indexOf(cls) === -1) {
+                        if (classesField.text.length > 0)
+                            classesField.text += ", ";
+                        classesField.text += cls
+                    }
+                }
             }
         }
 

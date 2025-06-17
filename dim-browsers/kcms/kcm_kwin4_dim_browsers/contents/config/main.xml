@@ -1,0 +1,17 @@
+<!DOCTYPE kcfg SYSTEM "kcfg.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name="" />
+    <group name="General">
+        <entry name="darkenFactor" type="Double">
+            <label>Darkening Level</label>
+            <default>0.5</default>
+        </entry>
+        <entry name="TargetClasses" type="String">
+            <label>Browser classes to dim (JSON array, e.g. ["firefox", "chromium", "google-chrome", "vivaldi"])</label>
+            <default>["firefox", "chromium", "google-chrome", "vivaldi"]</default>
+        </entry>
+    </group>
+</kcfg>

@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Id": "kcm_kwin4_dim_browsers",
+        "Name": "Dim Browser Windows",
+        "ServiceTypes": ["KCModule"]
+    },
+    "X-KDE-ParentComponents": ["dim_browsers"]
+}
