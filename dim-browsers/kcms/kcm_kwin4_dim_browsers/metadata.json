@@ -1,8 +1,20 @@
 {
+    "KPackageStructure": "KCModule",
     "KPlugin": {
         "Id": "kcm_kwin4_dim_browsers",
         "Name": "Dim Browser Windows",
+        "Description": "Configuration module for the Dim Browser Windows KWin effect",
+        "Authors": [
+            {
+                "Email": "shaunchokshi-gh@pm.me",
+                "Name": "Shaun Chokshi"
+            }
+        ],
+        "Category": "Window Management",
+        "Version": "3.0",
+        "License": "GPL",
         "ServiceTypes": ["KCModule"]
     },
-    "X-KDE-ParentComponents": ["dim_browsers"]
+    "X-KDE-ParentComponents": ["dim_browsers"],
+    "X-KDE-ParentApp": "org.kde.kwin"
 }
